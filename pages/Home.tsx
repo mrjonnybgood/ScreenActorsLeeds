@@ -3,11 +3,10 @@ import { NavLink } from 'react-router-dom';
 import Button from '../components/Button';
 import ImageWithFallback from '../components/ImageWithFallback';
 
-// GitHub Raw Images (Fallback for when local images are missing in preview)
-const GITHUB_BASE = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images";
-const PH_FEEDBACK = `${GITHUB_BASE}/workshop-feedback.jpg`;
-const PH_SCENE = `${GITHUB_BASE}/workshop-scene.jpg`;
-const PH_CAMERA = `${GITHUB_BASE}/workshop-camera.jpg`;
+// Unsplash Fallbacks (Used if local custom images are missing)
+const PH_FEEDBACK = "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"; // Group setting
+const PH_SCENE = "https://images.unsplash.com/photo-1478720568477-152d9b164e63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"; // Cinematic light/Scene
+const PH_CAMERA = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"; // Camera lens
 
 const Home: React.FC = () => {
   return (

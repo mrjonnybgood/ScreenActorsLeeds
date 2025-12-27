@@ -9,8 +9,6 @@ const navItems: NavItem[] = [
   { label: 'Contact', path: '/contact' },
 ];
 
-const LOGO_FALLBACK = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images/logo.png";
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -33,14 +31,7 @@ const Navbar: React.FC = () => {
                     src="/images/logo.png" 
                     alt="Logo" 
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                        // If local fails, try GitHub raw url
-                        if (e.currentTarget.src !== LOGO_FALLBACK) {
-                            e.currentTarget.src = LOGO_FALLBACK;
-                        } else {
-                            setLogoError(true);
-                        }
-                    }}
+                    onError={() => setLogoError(true)}
                   />
                 ) : (
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

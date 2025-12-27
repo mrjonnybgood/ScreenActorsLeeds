@@ -2,10 +2,9 @@ import React from 'react';
 import Button from '../components/Button';
 import ImageWithFallback from '../components/ImageWithFallback';
 
-// GitHub Raw Image Fallbacks
-const GITHUB_BASE = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images";
-const PH_EXTERIOR = `${GITHUB_BASE}/kirkstall-exterior.jpg`;
-const PH_INTERIOR = `${GITHUB_BASE}/kirkstall-interior.jpg`;
+// Unsplash Fallbacks
+const PH_EXTERIOR = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80";
+const PH_INTERIOR = "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80";
 
 const Contact: React.FC = () => {
   return (
