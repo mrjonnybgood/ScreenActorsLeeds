@@ -1,0 +1,15 @@
+IMPORTANT: PLACE YOUR IMAGES IN THIS FOLDER
+
+For your custom images to appear on the website, you must upload them to this folder (public/images/).
+
+Please ensure your files are named exactly as follows to match the code:
+
+1. logo.png              (Your logo)
+2. phil-photo.jpg        (Photo for About page)
+3. kirkstall-exterior.jpg (Location exterior)
+4. kirkstall-interior.jpg (Location interior)
+5. workshop-scene.jpg    (Workshop action shot 1)
+6. workshop-camera.jpg   (Workshop action shot 2)
+7. workshop-feedback.jpg (Workshop action shot 3)
+
+Once these files are in this folder, the website will automatically show them instead of the internet placeholders.
