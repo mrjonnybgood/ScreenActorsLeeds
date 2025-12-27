@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Button from '../components/Button';
 import ImageWithFallback from '../components/ImageWithFallback';
 
-// Unsplash placeholders
-const PH_FEEDBACK = "https://images.unsplash.com/photo-1596726848133-c40d75ae31b3?auto=format&fit=crop&q=80&w=2000";
-const PH_SCENE = "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&q=80&w=1000";
-const PH_CAMERA = "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000";
+// GitHub Raw Images (Fallback for when local images are missing in preview)
+const GITHUB_BASE = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images";
+const PH_FEEDBACK = `${GITHUB_BASE}/workshop-feedback.jpg`;
+const PH_SCENE = `${GITHUB_BASE}/workshop-scene.jpg`;
+const PH_CAMERA = `${GITHUB_BASE}/workshop-camera.jpg`;
 
 const Home: React.FC = () => {
   return (

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+const LOGO_FALLBACK = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images/logo.png";
+
 const Footer: React.FC = () => {
   const [logoError, setLogoError] = useState(false);
 
@@ -18,7 +20,14 @@ const Footer: React.FC = () => {
                     src="/images/logo.png" 
                     alt="Logo" 
                     className="w-full h-full object-cover"
-                    onError={() => setLogoError(true)}
+                    onError={(e) => {
+                        // If local fails, try GitHub raw url
+                        if (e.currentTarget.src !== LOGO_FALLBACK) {
+                            e.currentTarget.src = LOGO_FALLBACK;
+                        } else {
+                            setLogoError(true);
+                        }
+                    }}
                   />
                 ) : (
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">

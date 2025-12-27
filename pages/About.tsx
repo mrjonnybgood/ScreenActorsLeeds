@@ -1,8 +1,8 @@
 import React from 'react';
 import ImageWithFallback from '../components/ImageWithFallback';
 
-// Placeholder for Phil's photo
-const PH_PHIL = "https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80&w=1000";
+// GitHub Raw Image Fallback
+const PH_PHIL = "https://raw.githubusercontent.com/mrjonnybgood/ScreenactorsLeeds/main/public/images/phil-photo.jpg";
 
 const About: React.FC = () => {
   return (
