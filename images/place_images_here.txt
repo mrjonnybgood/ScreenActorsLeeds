@@ -1,0 +1,9 @@
+PLEASE DRAG YOUR IMAGES INTO THIS FOLDER:
+
+1. logo.png
+2. phil-photo.jpg
+3. kirkstall-exterior.jpg
+4. kirkstall-interior.jpg
+5. workshop-scene.jpg
+6. workshop-camera.jpg
+7. workshop-feedback.jpg
