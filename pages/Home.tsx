@@ -2,6 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../components/Button';
 
+// Placeholders for missing images. Uncomment the lines below when images are added.
+// import workshopFeedbackImg from '../images/workshop-feedback.jpg';
+// import workshopSceneImg from '../images/workshop-scene.jpg';
+// import workshopCameraImg from '../images/workshop-camera.jpg';
+
+const workshopFeedbackImg = "https://placehold.co/1200x800/27272a/FFFFFF/jpg?text=Feedback+Session";
+const workshopSceneImg = "https://placehold.co/800x600/e4e4e7/1a1a1a/jpg?text=Scene+Work";
+const workshopCameraImg = "https://placehold.co/800x600/e4e4e7/1a1a1a/jpg?text=On+Camera";
+
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
@@ -11,7 +20,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0 opacity-30">
             {/* Background Image: using workshop-feedback.jpg for ambiance */}
             <img 
-                src="/images/workshop-feedback.jpg" 
+                src={workshopFeedbackImg} 
                 alt="Workshop atmosphere background" 
                 className="w-full h-full object-cover grayscale"
             />
@@ -55,7 +64,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <img 
-                  src="/images/workshop-scene.jpg" 
+                  src={workshopSceneImg} 
                   alt="Actors working on a scene" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -70,7 +79,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <img 
-                  src="/images/workshop-camera.jpg" 
+                  src={workshopCameraImg} 
                   alt="Camera setup in workshop" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -85,7 +94,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <img 
-                  src="/images/workshop-feedback.jpg" 
+                  src={workshopFeedbackImg} 
                   alt="Group feedback session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />

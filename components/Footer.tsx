@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Placeholder for missing logo.png. Uncomment the line below when the image is added.
+// import logoImg from '../images/logo.png';
+const logoImg = "https://placehold.co/100x100/1a1a1a/FFFFFF/png?text=SA";
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800">
@@ -11,7 +15,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
              <div className="flex items-center gap-3">
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden">
-                 <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                 <img src={logoImg} alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-serif text-lg font-semibold text-zinc-100">
                 SCREEN ACTORS <span className="text-zinc-500 text-xs tracking-widest uppercase">Leeds</span>

@@ -1,6 +1,13 @@
 import React from 'react';
 import Button from '../components/Button';
 
+// Placeholders for missing images. Uncomment the lines below when images are added.
+// import kirkstallExterior from '../images/Kirkstall-exterior.jpg';
+// import kirkstallInterior from '../images/kirkstall-interior.jpg';
+
+const kirkstallExterior = "https://placehold.co/800x450/e4e4e7/1a1a1a/jpg?text=Kirkstall+Forge+Exterior";
+const kirkstallInterior = "https://placehold.co/800x450/e4e4e7/1a1a1a/jpg?text=Studio+Interior";
+
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen pt-20 bg-brand-light">
@@ -69,14 +76,14 @@ const Contact: React.FC = () => {
             <div className="space-y-8">
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                      <img 
-                        src="/images/Kirkstall-exterior.jpg" 
+                        src={kirkstallExterior} 
                         alt="Kirkstall Forge Exterior" 
                         className="w-full h-full object-cover"
                     />
                 </div>
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                     <img 
-                        src="/images/kirkstall-interior.jpg" 
+                        src={kirkstallInterior} 
                         alt="Building Interior" 
                         className="w-full h-full object-cover"
                     />
