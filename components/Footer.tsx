@@ -10,8 +10,10 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
              <div className="flex items-center gap-3">
-              <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden">
-                 <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+              <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden text-zinc-300">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+                </svg>
               </div>
               <span className="font-serif text-lg font-semibold text-zinc-100">
                 SCREEN ACTORS <span className="text-zinc-500 text-xs tracking-widest uppercase">Leeds</span>

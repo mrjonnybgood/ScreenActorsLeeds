@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from '../components/Button';
 
+// Placeholders for location images
+const kirkstallExterior = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000";
+const kirkstallInterior = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000";
+
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen pt-20 bg-brand-light">
@@ -49,7 +53,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <span className="block text-xs text-zinc-500 uppercase tracking-wide">Email</span>
-                                <span className="text-zinc-900">EMAIL_HERE</span>
+                                <span className="text-zinc-900">contact@screenactorsleeds.co.uk</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 p-4 bg-white border border-zinc-200 rounded-lg">
@@ -58,7 +62,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <span className="block text-xs text-zinc-500 uppercase tracking-wide">Phone</span>
-                                <span className="text-zinc-900">PHONE_HERE</span>
+                                <span className="text-zinc-900">07700 900000</span>
                             </div>
                         </div>
                     </div>
@@ -68,16 +72,15 @@ const Contact: React.FC = () => {
             {/* Visuals Column */}
             <div className="space-y-8">
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
-                     {/* Note Capital K in Kirkstall to match file system */}
                      <img 
-                        src="/images/Kirkstall-exterior.jpg" 
+                        src={kirkstallExterior} 
                         alt="Kirkstall Forge Exterior" 
                         className="w-full h-full object-cover"
                     />
                 </div>
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                     <img 
-                        src="/images/kirkstall-interior.jpg" 
+                        src={kirkstallInterior} 
                         alt="Building Interior" 
                         className="w-full h-full object-cover"
                     />
