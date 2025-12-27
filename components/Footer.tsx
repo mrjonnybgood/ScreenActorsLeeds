@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
              <div className="flex items-center gap-3">
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden">
-                 <img src="./images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                 <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-serif text-lg font-semibold text-zinc-100">
                 SCREEN ACTORS <span className="text-zinc-500 text-xs tracking-widest uppercase">Leeds</span>

@@ -12,7 +12,7 @@ const About: React.FC = () => {
              <div className="aspect-[3/4] bg-zinc-100 relative z-10 shadow-lg">
                 {/* Image: phil-photo.jpg */}
                 <img 
-                  src="./images/phil-photo.jpg" 
+                  src="/images/phil-photo.jpg" 
                   alt="Philip Wolff" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />

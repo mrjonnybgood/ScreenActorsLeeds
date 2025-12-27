@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
             <NavLink to="/" onClick={closeMenu} className="flex items-center gap-3 group">
               <div className="h-10 w-10 bg-zinc-800 rounded-full flex items-center justify-center overflow-hidden border border-zinc-700 group-hover:border-brand-teal transition-colors">
                 <img 
-                  src="./images/logo.png" 
+                  src="/images/logo.png" 
                   alt="Screen Actors Leeds Logo" 
                   className="h-full w-full object-cover opacity-90"
                 />

@@ -69,14 +69,14 @@ const Contact: React.FC = () => {
             <div className="space-y-8">
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                      <img 
-                        src="./images/kirkstall-exterior.jpg" 
+                        src="/images/Kirkstall-exterior.jpg" 
                         alt="Kirkstall Forge Exterior" 
                         className="w-full h-full object-cover"
                     />
                 </div>
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                     <img 
-                        src="./images/kirkstall-interior.jpg" 
+                        src="/images/kirkstall-interior.jpg" 
                         alt="Building Interior" 
                         className="w-full h-full object-cover"
                     />
