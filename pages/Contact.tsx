@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from '../components/Button';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 // Placeholders for location images
-const kirkstallExterior = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000";
-const kirkstallInterior = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000";
+const PH_EXTERIOR = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000";
+const PH_INTERIOR = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000";
 
 const Contact: React.FC = () => {
   return (
@@ -72,15 +73,17 @@ const Contact: React.FC = () => {
             {/* Visuals Column */}
             <div className="space-y-8">
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
-                     <img 
-                        src={kirkstallExterior} 
+                     <ImageWithFallback 
+                        src="/images/kirkstall-exterior.jpg" 
+                        fallbackSrc={PH_EXTERIOR}
                         alt="Kirkstall Forge Exterior" 
                         className="w-full h-full object-cover"
                     />
                 </div>
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
-                    <img 
-                        src={kirkstallInterior} 
+                    <ImageWithFallback 
+                        src="/images/kirkstall-interior.jpg" 
+                        fallbackSrc={PH_INTERIOR}
                         alt="Building Interior" 
                         className="w-full h-full object-cover"
                     />

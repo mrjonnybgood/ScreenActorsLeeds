@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../components/Button';
+import ImageWithFallback from '../components/ImageWithFallback';
 
-// Using Unsplash placeholders to ensure app runs without local assets
-const workshopFeedbackImg = "https://images.unsplash.com/photo-1596726848133-c40d75ae31b3?auto=format&fit=crop&q=80&w=2000";
-const workshopSceneImg = "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&q=80&w=1000";
-const workshopCameraImg = "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000";
+// Unsplash placeholders
+const PH_FEEDBACK = "https://images.unsplash.com/photo-1596726848133-c40d75ae31b3?auto=format&fit=crop&q=80&w=2000";
+const PH_SCENE = "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&q=80&w=1000";
+const PH_CAMERA = "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000";
 
 const Home: React.FC = () => {
   return (
@@ -15,8 +16,9 @@ const Home: React.FC = () => {
       <section className="relative w-full py-20 lg:py-32 bg-zinc-900 text-brand-light overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-30">
             {/* Background Image */}
-            <img 
-                src={workshopFeedbackImg} 
+            <ImageWithFallback 
+                src="/images/workshop-feedback.jpg" 
+                fallbackSrc={PH_FEEDBACK}
                 alt="Workshop atmosphere background" 
                 className="w-full h-full object-cover grayscale"
             />
@@ -59,8 +61,9 @@ const Home: React.FC = () => {
             {/* Card 1 */}
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
-                <img 
-                  src={workshopSceneImg} 
+                <ImageWithFallback 
+                  src="/images/workshop-scene.jpg"
+                  fallbackSrc={PH_SCENE}
                   alt="Actors working on a scene" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -74,8 +77,9 @@ const Home: React.FC = () => {
             {/* Card 2 */}
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
-                <img 
-                  src={workshopCameraImg} 
+                <ImageWithFallback 
+                  src="/images/workshop-camera.jpg"
+                  fallbackSrc={PH_CAMERA}
                   alt="Camera setup in workshop" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -89,8 +93,9 @@ const Home: React.FC = () => {
             {/* Card 3 */}
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
-                <img 
-                  src={workshopFeedbackImg} 
+                <ImageWithFallback 
+                  src="/images/workshop-feedback.jpg"
+                  fallbackSrc={PH_FEEDBACK}
                   alt="Group feedback session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />

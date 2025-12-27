@@ -1,7 +1,8 @@
 import React from 'react';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 // Placeholder for Phil's photo
-const philPhoto = "https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80&w=1000";
+const PH_PHIL = "https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80&w=1000";
 
 const About: React.FC = () => {
   return (
@@ -13,8 +14,9 @@ const About: React.FC = () => {
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
              <div className="aspect-[3/4] bg-zinc-100 relative z-10 shadow-lg">
-                <img 
-                  src={philPhoto} 
+                <ImageWithFallback 
+                  src="/images/phil-photo.jpg" 
+                  fallbackSrc={PH_PHIL}
                   alt="Philip Wolff" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
