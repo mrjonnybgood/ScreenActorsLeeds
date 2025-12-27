@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { NavItem } from '../types';
 
-// Placeholder for missing logo.png. Uncomment the line below when the image is added.
-// import logoImg from '../images/logo.png';
-const logoImg = "https://placehold.co/100x100/1a1a1a/FFFFFF/png?text=SA";
-
 const navItems: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -30,7 +26,7 @@ const Navbar: React.FC = () => {
             <NavLink to="/" onClick={closeMenu} className="flex items-center gap-3 group">
               <div className="h-10 w-10 bg-zinc-800 rounded-full flex items-center justify-center overflow-hidden border border-zinc-700 group-hover:border-brand-teal transition-colors">
                 <img 
-                  src={logoImg} 
+                  src="/images/logo.png" 
                   alt="Screen Actors Leeds Logo" 
                   className="h-full w-full object-cover opacity-90"
                 />

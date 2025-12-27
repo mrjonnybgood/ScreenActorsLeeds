@@ -1,9 +1,5 @@
 import React from 'react';
 
-// Placeholder for missing phil-photo.jpg. Uncomment the line below when the image is added.
-// import philPhoto from '../images/phil-photo.jpg';
-const philPhoto = "https://placehold.co/600x800/e4e4e7/1a1a1a/jpg?text=Philip+Wolff";
-
 const About: React.FC = () => {
   return (
     <div className="min-h-screen pt-20 pb-12 bg-white">
@@ -15,7 +11,7 @@ const About: React.FC = () => {
           <div className="order-2 md:order-1 relative">
              <div className="aspect-[3/4] bg-zinc-100 relative z-10 shadow-lg">
                 <img 
-                  src={philPhoto} 
+                  src="/images/phil-photo.jpg" 
                   alt="Philip Wolff" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
