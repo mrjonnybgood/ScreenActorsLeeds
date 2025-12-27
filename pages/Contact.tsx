@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
             <div className="space-y-8">
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                      <ImageWithFallback 
-                        src="/images/kirkstall-exterior.jpg" 
+                        src="images/kirkstall-exterior.jpg" 
                         fallbackSrc={PH_EXTERIOR}
                         alt="Kirkstall Forge Exterior" 
                         className="w-full h-full object-cover"
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="bg-zinc-200 aspect-video w-full overflow-hidden shadow-md">
                     <ImageWithFallback 
-                        src="/images/kirkstall-interior.jpg" 
+                        src="images/kirkstall-interior.jpg" 
                         fallbackSrc={PH_INTERIOR}
                         alt="Building Interior" 
                         className="w-full h-full object-cover"

@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
               <div className="h-10 w-10 bg-zinc-800 rounded-full flex items-center justify-center overflow-hidden border border-zinc-700 group-hover:border-brand-teal transition-colors text-white">
                 {!logoError ? (
                   <img 
-                    src="/images/logo.png" 
+                    src="images/logo.png" 
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}

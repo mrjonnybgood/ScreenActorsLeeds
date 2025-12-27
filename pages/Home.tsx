@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0 opacity-30">
             {/* Background Image */}
             <ImageWithFallback 
-                src="/images/workshop-feedback.jpg" 
+                src="images/workshop-feedback.jpg" 
                 fallbackSrc={PH_FEEDBACK}
                 alt="Workshop atmosphere background" 
                 className="w-full h-full object-cover grayscale"
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <ImageWithFallback 
-                  src="/images/workshop-scene.jpg"
+                  src="images/workshop-scene.jpg"
                   fallbackSrc={PH_SCENE}
                   alt="Actors working on a scene" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <ImageWithFallback 
-                  src="/images/workshop-camera.jpg"
+                  src="images/workshop-camera.jpg"
                   fallbackSrc={PH_CAMERA}
                   alt="Camera setup in workshop" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
             <div className="group space-y-4">
               <div className="aspect-[4/3] bg-zinc-200 overflow-hidden shadow-sm">
                 <ImageWithFallback 
-                  src="/images/workshop-feedback.jpg"
+                  src="images/workshop-feedback.jpg"
                   fallbackSrc={PH_FEEDBACK}
                   alt="Group feedback session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"

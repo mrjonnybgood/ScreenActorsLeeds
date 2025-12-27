@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden text-zinc-300">
                  {!logoError ? (
                   <img 
-                    src="/images/logo.png" 
+                    src="images/logo.png" 
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}

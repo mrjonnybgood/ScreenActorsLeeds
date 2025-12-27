@@ -15,7 +15,7 @@ const About: React.FC = () => {
           <div className="order-2 md:order-1 relative">
              <div className="aspect-[3/4] bg-zinc-100 relative z-10 shadow-lg">
                 <ImageWithFallback 
-                  src="/images/phil-photo.jpg" 
+                  src="images/phil-photo.jpg" 
                   fallbackSrc={PH_PHIL}
                   alt="Philip Wolff" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
