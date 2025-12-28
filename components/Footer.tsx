@@ -4,6 +4,12 @@ import { NavLink } from 'react-router-dom';
 const Footer: React.FC = () => {
   const [logoError, setLogoError] = useState(false);
 
+  // Helper for asset path with safety check
+  const getLogoPath = () => {
+    const baseUrl = import.meta.env?.BASE_URL ?? '/ScreenActorsLeeds/';
+    return `${baseUrl}images/logo.png`;
+  };
+
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +21,7 @@ const Footer: React.FC = () => {
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden text-zinc-300">
                  {!logoError ? (
                   <img 
-                    src="images/logo.png" 
+                    src={getLogoPath()} 
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}

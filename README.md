@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Screen Actors Leeds Website
 
-# Run and deploy your AI Studio app
+## 📸 Image Setup (Important)
 
-This contains everything you need to run your app locally.
+For images to appear correctly on the live website and GitHub Pages, they must be placed in the **`public/images/`** folder.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1LxSIR11by7Hr-HopB5d3ELVGlY82CRIK
+**Do not** put images in a root `images` folder. Vite only looks inside `public` for static assets.
 
-## Run Locally
+### Required File Structure
+In your GitHub repository, ensure your files are here:
 
-**Prerequisites:**  Node.js
+```
+/public
+  /images
+    logo.png
+    phil-photo.jpg
+    kirkstall-exterior.jpg
+    kirkstall-interior.jpg
+    workshop-scene.jpg
+    workshop-camera.jpg
+    workshop-feedback.jpg
+```
 
+## 🚀 Running Locally
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. `npm install`
+2. `npm start` (Runs on port 8080)

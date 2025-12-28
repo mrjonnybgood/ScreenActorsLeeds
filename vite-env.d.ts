@@ -1,19 +1,14 @@
-declare module '*.png' {
-  const value: string;
-  export default value;
+// Manually define Vite environment types to resolve "Cannot find type definition file for 'vite/client'"
+// and "Property 'env' does not exist on type 'ImportMeta'" errors.
+
+interface ImportMetaEnv {
+  readonly BASE_URL: string;
+  readonly MODE: string;
+  readonly DEV: boolean;
+  readonly PROD: boolean;
+  readonly SSR: boolean;
 }
 
-declare module '*.jpg' {
-  const value: string;
-  export default value;
-}
-
-declare module '*.jpeg' {
-  const value: string;
-  export default value;
-}
-
-declare module '*.svg' {
-  const value: string;
-  export default value;
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
 }

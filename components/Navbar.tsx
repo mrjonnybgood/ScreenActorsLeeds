@@ -17,6 +17,12 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  // Helper for asset path with safety check
+  const getLogoPath = () => {
+    const baseUrl = import.meta.env?.BASE_URL ?? '/ScreenActorsLeeds/';
+    return `${baseUrl}images/logo.png`;
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-brand-light/95 backdrop-blur-sm border-b border-zinc-200 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +34,7 @@ const Navbar: React.FC = () => {
               <div className="h-10 w-10 bg-zinc-800 rounded-full flex items-center justify-center overflow-hidden border border-zinc-700 group-hover:border-brand-teal transition-colors text-white">
                 {!logoError ? (
                   <img 
-                    src="images/logo.png" 
+                    src={getLogoPath()}
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}

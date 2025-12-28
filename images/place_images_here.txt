@@ -1,9 +1,7 @@
-PLEASE DRAG YOUR IMAGES INTO THIS FOLDER:
+⚠️ MOVED ⚠️
 
-1. logo.png
-2. phil-photo.jpg
-3. kirkstall-exterior.jpg
-4. kirkstall-interior.jpg
-5. workshop-scene.jpg
-6. workshop-camera.jpg
-7. workshop-feedback.jpg
+Please do not put images here.
+
+Move your images to the "public/images" folder instead.
+
+When the site runs, the 'public' folder contents are automatically moved to the root, which is why the code looks for them there.
