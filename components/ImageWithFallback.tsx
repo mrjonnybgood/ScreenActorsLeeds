@@ -6,19 +6,23 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
 }
 
 const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, fallbackSrc, alt, ...props }) => {
-  // Helper to ensure path includes the base URL if it's a local asset
   const getAssetPath = (path: string) => {
-    // If it's an external URL (http), return as is
     if (path.startsWith('http')) return path;
     
-    // Clean up the path: remove leading slash if present to avoid double slashes
+    // Remove leading slash if user provided one
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
     
-    // Safe access to BASE_URL with fallback to the repo name
-    // The "?." prevents the "Cannot read properties of undefined" error
-    const baseUrl = import.meta.env?.BASE_URL ?? '/ScreenActorsLeeds/';
+    // Use a more reliable way to detect if we are in a subfolder environment
+    const isGithubPages = window.location.hostname.includes('github.io');
+    const repoName = 'ScreenActorsLeeds';
     
-    return `${baseUrl}${cleanPath}`;
+    // If we are on GitHub Pages and not already including the repo name, prepend it
+    if (isGithubPages && !window.location.pathname.includes(repoName)) {
+      return `/${repoName}/${cleanPath}`;
+    }
+
+    // Default: just return the path relative to root
+    return `/${cleanPath}`;
   };
 
   const [imgSrc, setImgSrc] = useState(getAssetPath(src));

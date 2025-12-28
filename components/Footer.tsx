@@ -4,18 +4,17 @@ import { NavLink } from 'react-router-dom';
 const Footer: React.FC = () => {
   const [logoError, setLogoError] = useState(false);
 
-  // Helper for asset path with safety check
   const getLogoPath = () => {
-    const baseUrl = import.meta.env?.BASE_URL ?? '/ScreenActorsLeeds/';
-    return `${baseUrl}images/logo.png`;
+    const isGithubPages = window.location.hostname.includes('github.io');
+    const repoName = 'ScreenActorsLeeds';
+    const path = 'images/logo.png';
+    return isGithubPages ? `/${repoName}/${path}` : `/${path}`;
   };
 
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Brand */}
           <div className="space-y-4">
              <div className="flex items-center gap-3">
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden text-zinc-300">
@@ -41,7 +40,6 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
             <h3 className="text-zinc-100 font-medium mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
@@ -52,7 +50,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Quick Contact */}
           <div>
              <h3 className="text-zinc-100 font-medium mb-4">Location</h3>
              <p className="text-sm leading-relaxed mb-4">
