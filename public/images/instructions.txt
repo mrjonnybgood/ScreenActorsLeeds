@@ -1,15 +1,18 @@
-IMPORTANT: PLACE YOUR IMAGES IN THIS FOLDER
+=== WHERE TO PUT IMAGES ===
 
-For your custom images to appear on the website, you must upload them to this folder (public/images/).
+Upload your images into this specific folder: 
+public/images/
 
-Please ensure your files are named exactly as follows to match the code:
+=== REQUIRED FILENAMES ===
+(The code looks for these exact names)
 
-1. logo.png              (Your logo)
-2. phil-photo.jpg        (Photo for About page)
-3. kirkstall-exterior.jpg (Location exterior)
-4. kirkstall-interior.jpg (Location interior)
-5. workshop-scene.jpg    (Workshop action shot 1)
-6. workshop-camera.jpg   (Workshop action shot 2)
-7. workshop-feedback.jpg (Workshop action shot 3)
+1. logo.png               (Your main logo)
+2. phil-photo.jpg         (Headshot for About page)
+3. kirkstall-exterior.jpg (Building outside shot)
+4. kirkstall-interior.jpg (Building inside shot)
+5. workshop-scene.jpg     (Action shot: Scene work)
+6. workshop-camera.jpg    (Action shot: Camera work)
+7. workshop-feedback.jpg  (Action shot: Feedback/Group)
 
-Once these files are in this folder, the website will automatically show them instead of the internet placeholders.
+=== NOTE ===
+If you do not upload a file, the website will automatically use a high-quality placeholder image from the internet so the site doesn't look broken.

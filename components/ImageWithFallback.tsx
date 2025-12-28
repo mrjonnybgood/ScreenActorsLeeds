@@ -7,14 +7,19 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
 
 const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, fallbackSrc, alt, ...props }) => {
   const getAssetPath = (path: string) => {
+    // If it's an external URL, use it as is
     if (path.startsWith('http')) return path;
     
-    // Remove leading slash if present to prevent double slashes
-    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    // Clean the path: remove leading slash or dot-slash to standardize
+    // e.g. "/images/logo.png" -> "images/logo.png"
+    // e.g. "./images/logo.png" -> "images/logo.png"
+    let cleanPath = path;
+    if (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
+    if (cleanPath.startsWith('./')) cleanPath = cleanPath.slice(2);
     
-    // Safely access BASE_URL. import.meta.env might be undefined if Vite transform fails or is bypassed.
-    const baseUrl = import.meta.env?.BASE_URL || '/';
-    return `${baseUrl}${cleanPath}`;
+    // Return with ./ prefix to ensure it is treated as relative to the index.html
+    // This works best with HashRouter and "base: './'" in vite.config.js
+    return `./${cleanPath}`;
   };
 
   const [imgSrc, setImgSrc] = useState(getAssetPath(src));
