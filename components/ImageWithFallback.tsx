@@ -9,20 +9,13 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, fallbackSrc,
   const getAssetPath = (path: string) => {
     if (path.startsWith('http')) return path;
     
-    // Remove leading slash if user provided one
+    // Remove leading slash if present to prevent double slashes
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
     
-    // Use a more reliable way to detect if we are in a subfolder environment
-    const isGithubPages = window.location.hostname.includes('github.io');
-    const repoName = 'ScreenActorsLeeds';
-    
-    // If we are on GitHub Pages and not already including the repo name, prepend it
-    if (isGithubPages && !window.location.pathname.includes(repoName)) {
-      return `/${repoName}/${cleanPath}`;
-    }
-
-    // Default: just return the path relative to root
-    return `/${cleanPath}`;
+    // import.meta.env.BASE_URL is provided by Vite and matches your vite.config.js 'base'
+    // It will be '/ScreenActorsLeeds/' on GitHub and '/' locally.
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    return `${baseUrl}${cleanPath}`;
   };
 
   const [imgSrc, setImgSrc] = useState(getAssetPath(src));
@@ -35,6 +28,7 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, fallbackSrc,
 
   const handleError = () => {
     if (!hasError) {
+      console.warn(`Failed to load image at: ${imgSrc}. Using fallback.`);
       setImgSrc(fallbackSrc);
       setHasError(true);
     }

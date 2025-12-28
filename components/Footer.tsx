@@ -3,13 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const [logoError, setLogoError] = useState(false);
-
-  const getLogoPath = () => {
-    const isGithubPages = window.location.hostname.includes('github.io');
-    const repoName = 'ScreenActorsLeeds';
-    const path = 'images/logo.png';
-    return isGithubPages ? `/${repoName}/${path}` : `/${path}`;
-  };
+  const logoPath = `${import.meta.env.BASE_URL}images/logo.png`;
 
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800">
@@ -20,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="h-8 w-8 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden text-zinc-300">
                  {!logoError ? (
                   <img 
-                    src={getLogoPath()} 
+                    src={logoPath} 
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}

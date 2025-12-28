@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
@@ -12,17 +12,11 @@ const navItems: NavItem[] = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
-  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const getLogoPath = () => {
-    const isGithubPages = window.location.hostname.includes('github.io');
-    const repoName = 'ScreenActorsLeeds';
-    const path = 'images/logo.png';
-    return isGithubPages ? `/${repoName}/${path}` : `/${path}`;
-  };
+  const logoPath = `${import.meta.env.BASE_URL}images/logo.png`;
 
   return (
     <nav className="fixed w-full z-50 bg-brand-light/95 backdrop-blur-sm border-b border-zinc-200 transition-all duration-300">
@@ -33,7 +27,7 @@ const Navbar: React.FC = () => {
               <div className="h-10 w-10 bg-zinc-800 rounded-full flex items-center justify-center overflow-hidden border border-zinc-700 group-hover:border-brand-teal transition-colors text-white">
                 {!logoError ? (
                   <img 
-                    src={getLogoPath()}
+                    src={logoPath}
                     alt="Logo" 
                     className="w-full h-full object-cover"
                     onError={() => setLogoError(true)}
