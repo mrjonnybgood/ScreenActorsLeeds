@@ -12,9 +12,8 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, fallbackSrc,
     // Remove leading slash if present to prevent double slashes
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
     
-    // import.meta.env.BASE_URL is provided by Vite and matches your vite.config.js 'base'
-    // It will be '/ScreenActorsLeeds/' on GitHub and '/' locally.
-    const baseUrl = import.meta.env.BASE_URL || '/';
+    // Safely access BASE_URL. import.meta.env might be undefined if Vite transform fails or is bypassed.
+    const baseUrl = import.meta.env?.BASE_URL || '/';
     return `${baseUrl}${cleanPath}`;
   };
 

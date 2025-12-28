@@ -16,7 +16,9 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const logoPath = `${import.meta.env.BASE_URL}images/logo.png`;
+  // Safely access BASE_URL using optional chaining and provide a fallback
+  const baseUrl = import.meta.env?.BASE_URL || '/';
+  const logoPath = `${baseUrl}images/logo.png`;
 
   return (
     <nav className="fixed w-full z-50 bg-brand-light/95 backdrop-blur-sm border-b border-zinc-200 transition-all duration-300">

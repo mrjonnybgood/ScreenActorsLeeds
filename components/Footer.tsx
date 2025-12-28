@@ -3,7 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const [logoError, setLogoError] = useState(false);
-  const logoPath = `${import.meta.env.BASE_URL}images/logo.png`;
+  
+  // Safely access BASE_URL
+  const baseUrl = import.meta.env?.BASE_URL || '/';
+  const logoPath = `${baseUrl}images/logo.png`;
 
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800">
